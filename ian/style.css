@@ -1,0 +1,1212 @@
+/* =========================
+   RESET DAN DASAR
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #fbfcff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.navbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #142b4a;
+  font-size: 19px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo small {
+  display: block;
+  font-size: 9px;
+  color: #71809a;
+  letter-spacing: 0.6px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2463eb;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 19px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #2463eb;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn:hover {
+  background: #174bc0;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #142b4a;
+  border-color: #dce3ef;
+}
+
+.btn-outline:hover {
+  background: #edf3ff;
+  color: #174bc0;
+}
+
+.btn-yellow {
+  background: #ffca66;
+  color: #18263c;
+  white-space: nowrap;
+}
+
+.btn-yellow:hover {
+  background: #ffd98e;
+}
+
+/* =========================
+   BERANDA
+========================= */
+.hero {
+  padding: 76px 0;
+  background:
+    radial-gradient(circle at 85% 15%,
+      #dce8ff,
+      transparent 30%),
+    linear-gradient(135deg, #f5f8ff, #ffffff);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #e5edff;
+  color: #204db3;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  margin: 22px 0;
+  font-size: clamp(36px, 4.5vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+}
+
+.hero h1 span {
+  color: #2463eb;
+}
+
+.hero-text>p {
+  max-width: 550px;
+  color: #657187;
+  font-size: 17px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* Kartu logo utama */
+.hero-logo-card {
+  min-height: 380px;
+  padding: 30px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #15315a, #2463eb);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 20px 50px #2463eb30;
+}
+
+.hero-logo {
+  width: min(270px, 80%);
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 6px solid #ffffffd9;
+  background: #ffffff;
+}
+
+.hero-logo-card h2 {
+  margin-top: 20px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.hero-logo-card p {
+  margin-top: 8px;
+  color: #dbe7ff;
+}
+
+/* =========================
+   BAGIAN UMUM
+========================= */
+.section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  max-width: 680px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #2463eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.section-heading h2,
+.about-text h2 {
+  margin: 12px 0;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+}
+
+.section-heading p,
+.about-text p {
+  color: #657187;
+}
+
+/* =========================
+   VISI, MISI, DAN NILAI
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  min-width: 0;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #142b4a12;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #eaf2ff;
+  font-size: 24px;
+}
+
+.card h3 {
+  margin: 17px 0 8px;
+}
+
+.card p,
+.card li {
+  color: #657187;
+  font-size: 14px;
+}
+
+.card ol {
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 9px;
+}
+
+/* =========================
+   PROGRAM KERJA
+========================= */
+.about-section {
+  background: #f1f5fc;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about-logo-wrap {
+  min-height: 300px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #d9e7ff, #eef4ff);
+  display: grid;
+  place-items: center;
+  padding: 25px;
+}
+
+.about-logo-wrap img {
+  width: min(260px, 90%);
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.program-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.program-list li {
+  margin: 12px 0;
+  font-weight: 700;
+  color: #33425a;
+}
+
+/* =========================
+   ORGANISASI MAHASISWA
+========================= */
+.organization-section {
+  background: #f7f9fc;
+}
+
+/* Foto utama dan deskripsi */
+.organization-feature {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  margin: 40px 0 70px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #142b4a0a;
+}
+
+.organization-photo {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #e5eaf2;
+}
+
+.organization-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.organization-description h3 {
+  margin: 12px 0;
+  font-size: 28px;
+  line-height: 1.3;
+}
+
+.organization-description p {
+  margin-bottom: 24px;
+  color: #657187;
+}
+
+/* Judul tambahan dalam bagian organisasi */
+.organization-heading {
+  margin-top: 55px;
+}
+
+/* Kartu pengurus */
+.organization-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin: 35px 0 60px;
+}
+
+.organization-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  box-shadow: 0 5px 22px #142b4a0a;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.organization-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #142b4a15;
+}
+
+.organization-card>img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  background: #e5eaf2;
+}
+
+.organization-card-content {
+  padding: 20px;
+}
+
+.event-label {
+  color: #2463eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.organization-card-content h3 {
+  margin: 10px 0;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.organization-card-content p {
+  color: #657187;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   GALERI ORGANISASI
+========================= */
+.organization-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.organization-gallery figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 5px 22px #142b4a0a;
+}
+
+.organization-gallery img {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+  background: #e5eaf2;
+  transition: transform 0.3s ease;
+}
+
+.organization-gallery figure:hover img {
+  transform: scale(1.04);
+}
+
+.organization-gallery figcaption {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* =========================
+   KOMPATIBILITAS KARTU LAMA
+========================= */
+.events {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #142b4a12;
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+  background: #e5eaf2;
+}
+
+/* Mendukung kartu lama yang memakai div dan emoji */
+div.event-image {
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.image-one {
+  background: linear-gradient(135deg, #16345d, #3476ff);
+}
+
+.image-two {
+  background: linear-gradient(135deg, #6437b8, #ad8aff);
+}
+
+.image-three {
+  background: linear-gradient(135deg, #087f8c, #50c8c2);
+}
+
+.event-content {
+  padding: 22px;
+}
+
+.event-content h3 {
+  margin: 8px 0;
+}
+
+.event-content p {
+  color: #657187;
+  font-size: 14px;
+}
+
+/* =========================
+   KONTAK
+========================= */
+.contact-section {
+  padding: 0 0 75px;
+}
+
+.contact-box {
+  padding: 44px;
+  background: #142b4a;
+  color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.contact-box h2 {
+  margin-bottom: 10px;
+  font-size: clamp(25px, 4vw, 34px);
+  line-height: 1.2;
+}
+
+.contact-box p {
+  color: #d1dcee;
+}
+
+.contact-box .btn {
+  flex-shrink: 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 30px 0;
+  background: #0d1d33;
+  color: #d7e0ef;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.footer-brand strong {
+  font-size: 14px;
+}
+
+.footer-brand p,
+.footer-content>p {
+  color: #9fb0c8;
+  font-size: 13px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1000px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .organization-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-content {
+    gap: 30px;
+  }
+}
+
+/* =========================
+   TABLET KECIL DAN HP
+========================= */
+@media (max-width: 850px) {
+
+  .hero-content,
+  .about-content,
+  .organization-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text>p {
+    max-width: 100%;
+  }
+
+  .cards,
+  .events {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-logo-wrap {
+    min-height: 230px;
+  }
+
+  .organization-photo {
+    height: 340px;
+  }
+
+  .contact-box {
+    padding: 30px;
+  }
+
+  .contact-box,
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* ==============================
+   TENTANG KAMI - HIMARS
+============================== */
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(59, 130, 246, 0.08),
+      transparent 30%
+    ),
+    #f7f9fd;
+}
+
+/* Judul Section */
+.about-heading {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.about-heading .subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.subtitle-line {
+  width: 25px;
+  height: 2px;
+  border-radius: 10px;
+  background: #3b82f6;
+}
+
+.about-heading h2 {
+  margin-bottom: 22px;
+  color: #14213d;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.about-heading h2 span {
+  color: #2563eb;
+}
+
+.about-heading > p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Layout Kartu */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: 28px;
+}
+
+/* Kartu Utama */
+.about-card {
+  position: relative;
+  overflow: hidden;
+  padding: 34px;
+  border: 1px solid #e7edf6;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(15, 35, 70, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  border-color: #c7d9ff;
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.10);
+}
+
+.about-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.about-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 17px;
+  font-size: 27px;
+}
+
+.vision-icon {
+  background: #eaf2ff;
+}
+
+.mission-icon {
+  background: #e7f8f1;
+}
+
+.card-number {
+  color: #cbd5e1;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.card-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.about-card h3 {
+  margin: 0 0 18px;
+  color: #14213d;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.about-card > p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+/* Dekorasi Kartu */
+.card-decoration {
+  position: absolute;
+  right: -45px;
+  bottom: -65px;
+  width: 150px;
+  height: 150px;
+  border: 25px solid rgba(59, 130, 246, 0.045);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Daftar Misi */
+.mission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mission-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 22px 0;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.mission-list li:first-child {
+  padding-top: 0;
+}
+
+.mission-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.mission-number {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.mission-list li:hover .mission-number {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.mission-list h4 {
+  margin: 2px 0 8px;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.mission-list p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vision-card {
+    max-width: 100%;
+  }
+
+  .about-heading {
+    margin-bottom: 42px;
+  }
+}
+
+/* HP */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 65px 0;
+  }
+
+  .about-heading {
+    margin-bottom: 32px;
+  }
+
+  .about-heading .subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .about-heading h2 {
+    font-size: 32px;
+    letter-spacing: -0.8px;
+  }
+
+  .about-heading > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .about-card h3 {
+    font-size: 24px;
+  }
+
+  .about-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .card-number {
+    font-size: 32px;
+  }
+
+  .mission-list {
+    margin-top: 24px;
+  }
+
+  .mission-list li {
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  .mission-number {
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+    font-size: 11px;
+  }
+
+  .mission-list h4 {
+    font-size: 14px;
+  }
+
+  .mission-list p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}
+
+/* Menghormati pengaturan minim animasi */
+@media (prefers-reduced-motion: reduce) {
+  .about-card,
+  .mission-number {
+    transition: none;
+  }
+
+  .about-card:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================
+   HP
+========================= */
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+
+  .navbar {
+    gap: 14px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .logo img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo small {
+    font-size: 8px;
+  }
+
+  .navbar>.btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 10px 14px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-content {
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .hero-text>p {
+    font-size: 15px;
+  }
+
+  .hero-logo-card {
+    min-height: 320px;
+    padding: 25px 20px;
+  }
+
+  .hero-logo {
+    width: min(220px, 80%);
+  }
+
+  .hero-logo-card h2 {
+    font-size: 22px;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-heading h2,
+  .about-text h2 {
+    font-size: 29px;
+  }
+
+  .cards,
+  .events,
+  .organization-grid,
+  .organization-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .organization-feature {
+    gap: 22px;
+    margin: 30px 0 50px;
+    padding: 15px;
+  }
+
+  .organization-photo {
+    height: 260px;
+  }
+
+  .organization-description h3 {
+    font-size: 23px;
+  }
+
+  .organization-card>img {
+    height: 280px;
+  }
+
+  .organization-gallery img {
+    height: 240px;
+  }
+
+  .organization-heading {
+    margin-top: 40px;
+  }
+
+  .contact-section {
+    padding-bottom: 50px;
+  }
+
+  .contact-box {
+    padding: 25px 20px;
+  }
+
+  .contact-box .btn {
+    white-space: normal;
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+}
+
+/* =========================
+   HP SANGAT KECIL
+========================= */
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .nav-links {
+    gap: 9px;
+    font-size: 11px;
+  }
+
+  .organization-photo {
+    height: 220px;
+  }
+}
+
+
+/* =========================
+   AKSESIBILITAS
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
